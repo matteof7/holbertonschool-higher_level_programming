@@ -1,0 +1,59 @@
+# Test for MyList class
+
+>>> MyList = __import__('1-my_list').MyList
+
+# Test with integers
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+# Test with negative numbers
+>>> my_list.append(-1)
+>>> my_list.print_sorted()
+[-1, 1, 2, 3, 4, 5]
+
+# Test with duplicate numbers
+>>> my_list.append(4)
+>>> my_list.print_sorted()
+[-1, 1, 2, 3, 4, 4, 5]
+
+# Test with empty list
+>>> empty_list = MyList()
+>>> empty_list.print_sorted()
+[]
+
+# Test that the original list is not modified
+>>> original = MyList([5, 4, 3, 2, 1])
+>>> print(original)
+[5, 4, 3, 2, 1]
+>>> original.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(original)
+[5, 4, 3, 2, 1]
+
+# Test with a single element
+>>> single_element = MyList([42])
+>>> single_element.print_sorted()
+[42]
+
+# Test with large numbers
+>>> large_numbers = MyList([1000000, 10000, 100000])
+>>> large_numbers.print_sorted()
+[10000, 100000, 1000000]
+
+# Test inheritance
+>>> issubclass(MyList, list)
+True
+
+# Test instance type
+>>> isinstance(MyList(), list)
+True
