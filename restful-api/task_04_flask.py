@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Simple Flask API implementation"""
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
