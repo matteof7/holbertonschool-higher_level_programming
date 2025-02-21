@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' /home/djib/holbertonschool-higher_level_programming/python-serialization/holbertonschool-higher_level_programming/restful-api/venv/bin/python3 "$0" "$@"
+'''exec' /home/djib/holbertonschool-higher_level_programming/python-serialization/holbertonschool-higher_level_programming/restful-api/venv/bin/python "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
